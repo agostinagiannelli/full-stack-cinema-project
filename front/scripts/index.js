@@ -34,8 +34,8 @@ const featMovies = document.getElementById("featuredMoviesList");
 const movieToHtml = ({ id, title, year, director, duration, genre, rate, poster }) => {
     const item = document.createElement("div");
     item.innerHTML = `
-    <div class="card shadow-sm">
-        <img class="card-img-top object-fit-cover" height="350" src="${poster}" alt="${title}">
+    <div class="card shadow-sm h-100">
+        <img class="card-img-top object-fit-cover" height="400" src="${poster}" alt="${title}">
         <div class="card-body">
             <h5 class="card-title"><strong>${title}</strong></h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">${year}</h6>
@@ -46,7 +46,7 @@ const movieToHtml = ({ id, title, year, director, duration, genre, rate, poster 
             <li class="list-group-item">Genres: ${genre[0]} · ${genre[1]} · ${genre[2]}</li>
         </ul>
         <div class="card-footer">
-            <p class="card-text">Rating: ⭐ ${rate}/10</p>
+            <p class="card-text">⭐ ${rate}/10</p>
         </div>
     </div>
     `;
@@ -55,7 +55,7 @@ const movieToHtml = ({ id, title, year, director, duration, genre, rate, poster 
 };
 
 // Render movies
-const renderMovie = () => {
+const renderMovies = () => {
     // featMovies.innerHTML = "";
     // const allMovies = repository.getAllMovies();
     // const items = allMovies.map(item => movieToHtml(item));
@@ -64,4 +64,4 @@ const renderMovie = () => {
     items.forEach(item => featMovies.append(item));
 };
 
-renderMovie();
+renderMovies();
