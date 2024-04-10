@@ -14,7 +14,7 @@ const renderMovies = (data) => {
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Director: ${movie.director}</li>
                 <li class="list-group-item">Duration: ${movie.duration}</li>
-                <li class="list-group-item">Genres: ${movie.genre[0]} · ${movie.genre[1]} · ${movie.genre[2]}</li>
+                <li class="list-group-item">Genres: ${movie.genre.join(' · ')}</li>
             </ul>
             <div class="card-footer">
                 <p class="card-text">⭐ ${movie.rate}/10</p>
