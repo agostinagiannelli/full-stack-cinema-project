@@ -3,7 +3,8 @@ body {
 }
 
 .card,
-.card img {
+.card img,
+.translateY {
     transition: all .2s ease;
 }
 
@@ -11,6 +12,7 @@ body {
     opacity: 80%;
 }
 
-.card:hover {
+.card:hover,
+.translateY:hover {
     transform: translateY(-5px);
 }
