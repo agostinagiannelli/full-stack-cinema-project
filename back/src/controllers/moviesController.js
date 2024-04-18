@@ -1,5 +1,8 @@
-const moviesController = (req, res) => {
-    res.status(200).send('Movie data will be available soon')
-};
+const { getMoviesService } = require('../services/moviesService')
 
-module.exports = moviesController;
+const moviesController = (req, res) => {
+    const movies = getMoviesService()
+    res.status(200).send(movies)
+}
+
+module.exports = moviesController

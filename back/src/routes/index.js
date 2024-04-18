@@ -1,7 +1,8 @@
-const { Router } = require('express');
-const { moviesRoutes } = require('./moviesRoutes');
-const router = Router();
+const { Router } = require('express')
+const { moviesRoutes } = require('./moviesRoutes')
 
-router.use('/movies', moviesRoutes);
+const router = Router()
 
-module.exports = router;
+router.use('/movies', moviesRoutes)
+
+module.exports = router

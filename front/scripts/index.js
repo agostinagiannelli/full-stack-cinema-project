@@ -17,7 +17,7 @@ const renderMovies = require("./renderMovies");
 //? Async/Await
 const getMovies = async () => {
     try {
-        const response = await axios.get("https://students-api.up.railway.app/movies");
+        const response = await axios.get("http://localhost:3000/movies");
         const data = response.data;
         renderMovies(data);
     } catch (error) { alert(`Error when getting movies: ${error.message}`) }
