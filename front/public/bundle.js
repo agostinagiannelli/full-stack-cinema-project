@@ -9,13 +9,23 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./scripts/getMovies.js":
+/*!******************************!*\
+  !*** ./scripts/getMovies.js ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("const axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\")\n\nconst renderMovies = __webpack_require__(/*! ./renderMovies */ \"./scripts/renderMovies.js\")\n\n//? jQuery\n// $.get(\"https://students-api.up.railway.app/movies\", (data, status) => renderMovies(data)).fail(() => alert(\"Error when getting movies\"));\n\n//? Promise\n// const getMovies = () => {\n//     axios.get(\"https://students-api.up.railway.app/movies\")\n//         .then(response => {\n//             const data = response.data;\n//             renderMovies(data);\n//         })\n//         .catch(error => { alert(`Error when getting movies: ${error.message}`) })\n// };\n\n//? Async/Await\nconst getMovies = async () => {\n    try {\n        const response = await axios.get(\"http://localhost:3000/movies\");\n        const data = response.data;\n        renderMovies(data);\n    } catch (error) { alert(`Error when getting movies: ${error.message}`) }\n};\n\nmodule.exports = getMovies\n\n//# sourceURL=webpack://front/./scripts/getMovies.js?");
+
+/***/ }),
+
 /***/ "./scripts/index.js":
 /*!**************************!*\
   !*** ./scripts/index.js ***!
   \**************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\nconst renderMovies = __webpack_require__(/*! ./renderMovies */ \"./scripts/renderMovies.js\");\n\n//? jQuery\n// $.get(\"https://students-api.up.railway.app/movies\", (data, status) => renderMovies(data)).fail(() => alert(\"Error when getting movies\"));\n\n//? Promise\n// const getMovies = () => {\n//     axios.get(\"https://students-api.up.railway.app/movies\")\n//         .then(response => {\n//             const data = response.data;\n//             renderMovies(data);\n//         })\n//         .catch(error => { alert(`Error when getting movies: ${error.message}`) })\n// };\n\n//? Async/Await\nconst getMovies = async () => {\n    try {\n        const response = await axios.get(\"http://localhost:3000/movies\");\n        const data = response.data;\n        renderMovies(data);\n    } catch (error) { alert(`Error when getting movies: ${error.message}`) }\n};\n\ngetMovies();\n\n//# sourceURL=webpack://front/./scripts/index.js?");
+eval("const getMovies = __webpack_require__(/*! ./getMovies */ \"./scripts/getMovies.js\")\n\ngetMovies();\n\n//# sourceURL=webpack://front/./scripts/index.js?");
 
 /***/ }),
 
