@@ -1,3 +1,5 @@
+const Movies = require('../utils/classMovies')
+
 const moviesList = [
     {
         "title": "Guardians of the Galaxy Vol. 2",
@@ -42,8 +44,16 @@ const moviesList = [
     }
 ]
 
+// module.exports = {
+//     getMoviesService: () => {
+//         return moviesList
+//     }
+// }
+
+//? Extra credit
 module.exports = {
     getMoviesService: () => {
-        return moviesList
+        const newMoviesList = moviesList.map(movie => new Movies(movie))
+        return newMoviesList
     }
 }
