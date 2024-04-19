@@ -1,4 +1,4 @@
-const Movies = require('../utils/classMovies')
+const Movies = require('../utils/classMovies');
 
 const moviesList = [
     {
@@ -42,18 +42,18 @@ const moviesList = [
         "rate": 8.8,
         "poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg"
     }
-]
+];
 
 // module.exports = {
 //     getMoviesService: () => {
 //         return moviesList
 //     }
-// }
+// };
 
 //? Extra credit
 module.exports = {
     getMoviesService: () => {
-        const newMoviesList = moviesList.map(movie => new Movies(movie))
-        return newMoviesList
+        const newMoviesList = moviesList.map(movie => new Movies(movie));
+        return newMoviesList;
     }
-}
+};

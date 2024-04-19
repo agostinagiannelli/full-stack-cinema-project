@@ -9,6 +9,6 @@ class Movies {
         this.rate = rate;
         this.poster = poster
     }
-}
+};
 
-module.exports = Movies
+module.exports = Movies;
