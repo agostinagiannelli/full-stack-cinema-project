@@ -1,6 +1,6 @@
-class Movies {
+class Movie {
     constructor({ title, year, director, duration, genre, rate, poster }) {
-        if (!title || !director || !poster) throw new Error('Empty fields, please check')
+        if (!title || !director || !poster) throw new Error('Missing values')
         this.title = title;
         this.year = year;
         this.director = director;
@@ -11,4 +11,4 @@ class Movies {
     }
 };
 
-module.exports = Movies;
+module.exports = Movie;

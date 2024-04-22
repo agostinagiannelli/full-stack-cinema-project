@@ -1,6 +1,5 @@
-const axios = require("axios")
-
-const renderMovies = require("./renderMovies")
+const axios = require("axios");
+const renderMovies = require("./renderMovies");
 
 //? jQuery
 // $.get("https://students-api.up.railway.app/movies", (data, status) => renderMovies(data)).fail(() => alert("Error when getting movies"));
@@ -24,4 +23,4 @@ const getMovies = async () => {
     } catch (error) { alert(`Error when getting movies: ${error.message}`) }
 };
 
-module.exports = getMovies
+module.exports = getMovies;

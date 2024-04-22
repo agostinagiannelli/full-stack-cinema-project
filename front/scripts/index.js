@@ -1,3 +1,3 @@
-const getMovies = require('./getMovies')
+const getMovies = require('./getMovies');
 
 getMovies();
