@@ -1,11 +1,11 @@
-const moviesService = require('../services/moviesService');
+const getMoviesService = require('../services/getMoviesService');
 
 const getMoviesController = async (req, res) => {
     try {
-        const movies = await moviesService.getAllMovies();
-        res.status(200).send(movies);
+        const movies = await getMoviesService.getAllMovies();
+        res.status(200).json(movies);
     } catch (error) {
-        res.status(500).send(`Get movies controller error: ${error.message}`)
+        res.status(500).json(`Get Movies Controller Error: ${error.message}`);
     }
 };
 

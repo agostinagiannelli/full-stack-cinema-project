@@ -70,7 +70,7 @@ module.exports = {
             const movies = await Movie.find();
             return movies;
         } catch (error) {
-            console.log(`Get movies service error: ${error.message}`);
+            console.log(`Get Movies Service Error: ${error.message}`);
         }
     }
 };

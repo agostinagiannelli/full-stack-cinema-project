@@ -6,12 +6,12 @@ const movie = {
     director: { type: String, required: true },
     duration: { type: String, required: true },
     genre: { type: Array, required: true },
-    rate: { type: Number, required: true },
+    rate: { type: Number, min: 0, max: 10, required: true },
     poster: { type: String, required: true, unique: true }
 };
 
 const movieSchema = new mongoose.Schema(movie);
 
-const Movie = mongoose.model('movie', movieSchema);
+const Movie = mongoose.model('Movie', movieSchema);
 
 module.exports = Movie;

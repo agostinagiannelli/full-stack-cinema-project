@@ -1,3 +1,5 @@
+// const postMovies = require('./postMovies');
+
 const elements = {
     title: document.getElementById("titleInput"),
     year: document.getElementById("yearInput"),
@@ -34,7 +36,11 @@ const submitForm = (event) => {
             },
         }).showToast();
     } else {
-        console.log("OK");
+        for (const key in elements) {
+            elements[key].value = "";
+        };
+        console.log('Submit form OK');
+        // postMovies();
     }
 };
 
