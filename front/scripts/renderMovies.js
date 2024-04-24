@@ -1,4 +1,4 @@
-const featMovies = document.getElementById("featuredMoviesList");
+const featuredMoviesList = document.getElementById("featuredMoviesList");
 
 const renderMovies = (data) => {
     const items = data.map(movie => {
@@ -23,7 +23,7 @@ const renderMovies = (data) => {
         `;
         return item;
     });
-    items.forEach(item => featMovies?.append(item));
+    items.forEach(item => featuredMoviesList?.append(item));
 };
 
 module.exports = renderMovies;
