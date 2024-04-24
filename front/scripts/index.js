@@ -1,6 +1,5 @@
 const axios = require("axios");
 const renderMovies = require("./renderMovies");
-const { submitForm, clearForm } = require('./addMovie');
 
 // $.get("https://students-api.up.railway.app/movies", (data, status) => renderMovies(data)).fail(() => alert("Error when getting movies"));
 
@@ -23,9 +22,3 @@ const getMovies = async () => {
 };
 
 getMovies();
-
-const submitFormButton = document.getElementById("submitFormButton");
-const clearFormButton = document.getElementById("clearFormButton");
-
-submitFormButton?.addEventListener('click', submitForm);
-clearFormButton?.addEventListener('click', clearForm);
