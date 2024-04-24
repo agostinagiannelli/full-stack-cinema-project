@@ -1,5 +1,14 @@
 const axios = require("axios");
 
+const addMovie = async (newMovie) => {
+    try {
+        await axios.post("http://localhost:3000/movies", newMovie);
+        console.log(`Movie added successfully: ${newMovie.title}`);
+    } catch (error) {
+        console.log(`Error when adding movie: ${error.message}`);
+    }
+};
+
 const showAlert = (text, style = {}) => {
     Toastify({
         text,
@@ -15,15 +24,6 @@ const showAlert = (text, style = {}) => {
             ...style,
         },
     }).showToast();
-};
-
-const addMovie = async (newMovie) => {
-    try {
-        await axios.post("http://localhost:3000/movies", newMovie);
-        console.log(`Movie added successfully: ${newMovie.title}`);
-    } catch (error) {
-        console.log(`Error when adding movie: ${error.message}`);
-    }
 };
 
 const clearForm = (event) => {
