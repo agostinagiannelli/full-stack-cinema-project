@@ -17,7 +17,9 @@ const getMovies = async () => {
     try {
         const response = await axios.get("http://localhost:3000/movies");
         renderMovies(response.data);
-    } catch (error) { console.log(`Error when getting movies: ${error.message}`) }
+    } catch (error) {
+        console.log(`Error when getting movies: ${error.message}`)
+    }
 };
 
 getMovies();
