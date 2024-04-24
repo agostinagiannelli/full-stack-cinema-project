@@ -50,46 +50,55 @@
 
     <main>
         <section id="addMovieForm">
-            <div class="container p-4 my-5 text-center">
+            <div class="container p-4 my-5">
                 <h2 class="pb-4 fw-bold text-body-emphasis text-center">Add Your Own Featured Movie</h2>
                 <div class="row align-items-md-stretch justify-content-center g-3">
                     <div class="col-md-6 translateY">
                         <div class="h-100 p-5 bg-body-tertiary border shadow-sm rounded-3">
                             <form>
-                                <div class="form-floating mb-3">
-                                    <input id="titleInput" type="text" class="form-control" placeholder="">
-                                    <label>Title</label>
+                                <div class="mb-3">
+                                    <label for="titleInput">Title</label>
+                                    <input id="titleInput" type="text" class="form-control">
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input id="yearInput" type="number" class="form-control" placeholder="">
-                                    <label>Year</label>
+                                <div class="mb-3">
+                                    <label for="yearInput">Year</label>
+                                    <input id="yearInput" type="number" class="form-control">
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input id="directorInput" type="text" class="form-control" placeholder="">
-                                    <label>Director</label>
+                                <div class="mb-3">
+                                    <label for="directorInput">Director</label>
+                                    <input id="directorInput" type="text" class="form-control">
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input id="durationInput" type="text" class="form-control" placeholder="">
-                                    <label>Duration</label>
+                                <div class="mb-3">
+                                    <label for="durationInput">Duration</label>
+                                    <input id="durationInput" type="text" class="form-control">
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input id="genreInput" type="text" class="form-control" placeholder="">
-                                    <label>Genre</label>
+                                <div class="mb-3">
+                                    <label for="genreInput">Genre</label>
+                                    <select id="genreInput" class="form-select" multiple>
+                                        <option value="Action">Action</option>
+                                        <option value="Adventure">Adventure</option>
+                                        <option value="Comedy">Comedy</option>
+                                        <option value="Crime">Crime</option>
+                                        <option value="Drama">Drama</option>
+                                        <option value="Fantasy">Fantasy</option>
+                                        <option value="Musical">Musical</option>
+                                        <option value="Romance">Romance</option>
+                                        <option value="Sci-Fi">Sci-Fi</option>
+                                    </select>
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input id="rateInput" type="number" min="0" max="10" class="form-control"
-                                        placeholder="">
-                                    <label>Rate</label>
+                                <div class="mb-3">
+                                    <label for="rateInput">Rate</label>
+                                    <input id="rateInput" type="number" min="0" max="10" class="form-control">
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input id="posterInput" type="url" class="form-control" placeholder="">
-                                    <label>Poster</label>
+                                <div class="mb-3">
+                                    <label for="posterInput">Poster</label>
+                                    <input id="posterInput" type="url" class="form-control">
                                 </div>
-                                <div>
-                                    <button id="addMovieButton"
-                                        class="btn btn-dark px-4 mt-3">Submit</button>
+                                <div class="text-center">
+                                    <button id="submitFormButton" class="btn btn-dark px-4 mt-3 mx-2"
+                                        type="button">Submit</button>
                                     <button id="clearFormButton"
-                                        class="btn btn-outline-secondary px-4 mt-3">Clear</button>
+                                        class="btn btn-outline-secondary px-4 mt-3 mx-2">Clear</button>
                                 </div>
                             </form>
                         </div>
@@ -126,8 +135,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="../scripts/addMovieForm.js"></script>
-    
+    <script src="../public/bundle.js"></script>
+
 </body>
 
 </html>

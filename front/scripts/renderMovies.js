@@ -23,7 +23,7 @@ const renderMovies = (data) => {
         `;
         return item;
     });
-    items.forEach(item => featMovies.append(item));
+    items.forEach(item => featMovies?.append(item));
 };
 
 module.exports = renderMovies;

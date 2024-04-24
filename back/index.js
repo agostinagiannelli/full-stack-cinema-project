@@ -5,5 +5,5 @@ const dbConnect = require('./src/config/dbConnect');
 const { PORT } = process.env;
 
 dbConnect()
-    .then(() => app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`)))
-    .catch((error) => console.log(`Server error: ${error.message}`));
+    .then(() => app.listen(PORT, () => console.log(`Server Listening on Port ${PORT}`)))
+    .catch((error) => console.log(`Server Error: ${error.message}`));

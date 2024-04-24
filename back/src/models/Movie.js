@@ -6,7 +6,7 @@ const movie = {
     director: { type: String, required: true },
     duration: { type: String, required: true },
     genre: { type: Array, required: true },
-    rate: { type: Number, min: 0, max: 10, required: true },
+    rate: { type: Number, required: true },
     poster: { type: String, required: true, unique: true }
 };
 

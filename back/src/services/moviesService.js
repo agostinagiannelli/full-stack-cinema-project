@@ -1,4 +1,3 @@
-//? Homework Express II
 // const moviesList = [
 //     {
 //         "title": "Guardians of the Galaxy Vol. 2",
@@ -44,33 +43,37 @@
 // ];
 
 // module.exports = {
-//     getAllMovies: () => {
+//     getMovies: () => {
 //         return moviesList
 //     }
 // };
 
-//? Homework Express II - Extra credit
-
 // const Movie = require('../utils/classMovie');
 
 // module.exports = {
-//     getAllMovies: () => {
+//     getMovies: () => {
 //         const newMoviesList = moviesList.map(movie => new Movie(movie));
 //         return newMoviesList;
 //     }
 // };
 
-//? Homework Mongoose I
-
 const Movie = require('../models/Movie');
 
 module.exports = {
-    getAllMovies: async () => {
+    getMovies: async () => {
         try {
             const movies = await Movie.find();
             return movies;
         } catch (error) {
             console.log(`Get Movies Service Error: ${error.message}`);
+        }
+    },
+    createMovie: async (movie) => {
+        try {
+            const newMovie = await Movie.create(movie);
+            return newMovie;
+        } catch (error) {
+            console.log(`Create Movies Service Error: ${error.message}`);
         }
     }
 };
