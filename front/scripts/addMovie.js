@@ -9,7 +9,7 @@ const addMovie = async (newMovie) => {
     }
 };
 
-const showAlert = (text, style = {}) => {
+const showAlert = (text, onClick = {}) => {
     Toastify({
         text,
         duration: 3000,
@@ -20,9 +20,9 @@ const showAlert = (text, style = {}) => {
         stopOnFocus: true,
         style: {
             background: "#000000",
-            borderRadius: '5px',
-            ...style,
+            borderRadius: '5px'
         },
+        ...onClick
     }).showToast();
 };
 
