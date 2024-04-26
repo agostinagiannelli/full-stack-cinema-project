@@ -1,7 +1,8 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-const URI = `${process.env.DB_HOST}+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_CLUSTER}.jopjgdw.mongodb.net/${process.env.DB}?retryWrites=true&w=majority&appName=${process.env.DB_CLUSTER}`;
+const { DB_HOST, DB_USER, DB_PASSWORD, DB_CLUSTER, DB } = process.env;
+const URI = `${DB_HOST}+srv://${DB_USER}:${DB_PASSWORD}@${DB_CLUSTER}.jopjgdw.mongodb.net/${DB}?retryWrites=true&w=majority`;
 
 const dbConnect = async () => {
     try {

@@ -1,3 +1,44 @@
+const Movie = require('../models/Movie');
+
+const getMovies = async () => {
+    try {
+        const movies = await Movie.find();
+        return movies;
+    } catch (error) {
+        console.log(`Get Movies Service Error: ${error.message}`);
+    }
+};
+
+const createMovie = async (movie) => {
+    try {
+        const newMovie = await Movie.create(movie);
+        return newMovie;
+    } catch (error) {
+        console.log(`Create Movies Service Error: ${error.message}`);
+    }
+};
+
+module.exports = { getMovies, createMovie };
+
+// module.exports = {
+//     getMovies: async () => {
+//         try {
+//             const movies = await Movie.find();
+//             return movies;
+//         } catch (error) {
+//             console.log(`Get Movies Service Error: ${error.message}`);
+//         }
+//     },
+//     createMovie: async (movie) => {
+//         try {
+//             const newMovie = await Movie.create(movie);
+//             return newMovie;
+//         } catch (error) {
+//             console.log(`Create Movies Service Error: ${error.message}`);
+//         }
+//     }
+// };
+
 // const moviesList = [
 //     {
 //         "title": "Guardians of the Galaxy Vol. 2",
@@ -56,24 +97,3 @@
 //         return newMoviesList;
 //     }
 // };
-
-const Movie = require('../models/Movie');
-
-module.exports = {
-    getMovies: async () => {
-        try {
-            const movies = await Movie.find();
-            return movies;
-        } catch (error) {
-            console.log(`Get Movies Service Error: ${error.message}`);
-        }
-    },
-    createMovie: async (movie) => {
-        try {
-            const newMovie = await Movie.create(movie);
-            return newMovie;
-        } catch (error) {
-            console.log(`Create Movies Service Error: ${error.message}`);
-        }
-    }
-};
